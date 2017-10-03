@@ -73,7 +73,7 @@ func errorResponse(w http.ResponseWriter, msg string) {
 func HandleShow(w http.ResponseWriter, req *http.Request) {
 
 	if req.Body == nil {
-		errorResponse(w, "empty request body")
+		errorResponse(w, "Could not decode request")
 		return
 	}
 
@@ -81,7 +81,7 @@ func HandleShow(w http.ResponseWriter, req *http.Request) {
 	b, err := ioutil.ReadAll(reader)
 
 	if err != nil {
-		errorResponse(w, err.Error())
+		errorResponse(w, "Could not decode request")
 		return
 	}
 
@@ -89,7 +89,7 @@ func HandleShow(w http.ResponseWriter, req *http.Request) {
 	err = json.Unmarshal(b, &showData)
 
 	if err != nil {
-		errorResponse(w, err.Error())
+		errorResponse(w, "Could not decode request")
 		return
 	}
 
