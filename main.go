@@ -61,7 +61,7 @@ func filterShow(r *ShowRequest) ([]byte, error) {
 	}
 
 	res.Response = shows
-	return json.Marshal(&res)
+	return json.MarshalIndent(&res, "", "  ")
 }
 
 func errorResponse(w http.ResponseWriter, msg string) {
