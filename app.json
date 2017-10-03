@@ -7,7 +7,7 @@
     "sample",
     "example"
   ],
-  "image": "heroku/go:1.6",
+  "image": "heroku/go:1.9",
   "mount_dir": "src/github.com/wy3148/stanservice",
   "website": "http://github.com/wy3148/stanservice",
   "repository": "http://github.com/wy3148/stanservice"
