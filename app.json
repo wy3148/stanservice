@@ -1,0 +1,14 @@
+{
+  "name": "Start on Heroku: Go",
+  "description": "Go Getting Started Example App",
+  "keywords": [
+    "stanservice",
+    "go",
+    "sample",
+    "example"
+  ],
+  "image": "heroku/go:1.6",
+  "mount_dir": "src/github.com/wy3148/stanservice",
+  "website": "http://github.com/wy3148/stanservice",
+  "repository": "http://github.com/wy3148/stanservice"
+}
