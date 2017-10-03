@@ -66,7 +66,8 @@ func filterShow(r *ShowRequest) ([]byte, error) {
 
 func errorResponse(w http.ResponseWriter, msg string) {
 	w.Header().Set("Content-Type", "application/json")
-	http.Error(w, `{"error":"`+msg+`"}`, http.StatusBadRequest)
+	w.WriteHeader(http.StatusBadRequest)
+	w.Write([]byte(`{"error":"` + msg + `"}`))
 }
 
 func HandleShow(w http.ResponseWriter, req *http.Request) {
